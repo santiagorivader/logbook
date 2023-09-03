@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Cards</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card {
+            width: 80%;
+            max-width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+            .center-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Título centrado</h1>
+    
+    <div class="center-container">
+        <img src="tu_imagen.jpg" alt="Imagen centrada" width="200">
+        
+        <div class="card" onclick="window.location.href='pagina1.html'">
+            <img src="imagen_card_1.jpg" alt="Imagen de la card 1">
+            <h2>Título de la Card 1</h2>
+        </div>
+
+        <div class="card" onclick="window.location.href='pagina2.html'">
+            <img src="imagen_card_2.jpg" alt="Imagen de la card 2">
+            <h2>Título de la Card 2</h2>
+        </div>
+
+        <div class="card" onclick="window.location.href='pagina3.html'">
+            <img src="imagen_card_3.jpg" alt="Imagen de la card 3">
+            <h2>Título de la Card 3</h2>
+        </div>
+
+        <div class="card" onclick="window.location.href='pagina4.html'">
+            <img src="imagen_card_4.jpg" alt="Imagen de la card 4">
+            <h2>Título de la Card 4</h2>
+        </div>
+    </div>
+</body>
+</html>
